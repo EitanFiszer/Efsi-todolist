@@ -1,0 +1,37 @@
+input[type=checkbox] {display: none;}
+ 
+        label {
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            padding-left: 30px;
+            margin-right: 15px;
+            color:#808080;
+        }
+        label:before {
+            content: "";
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            margin-right: 10px;
+            position: absolute;
+            left: 0;
+            top: -1px;
+            background-color: #fff;
+            border: 2px solid #d0d0d0;
+            box-sizing: border-box;
+        }
+ 
+        /* Unicamente para los que tengan el estilo tachado */
+        input[type=checkbox]:checked + label.tachado {text-decoration:line-through;}
+ 
+        /* Mostramos el check */
+        input[type=checkbox]:checked + label:before {
+            content: "\02714";
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 15px;
+            background-color: #fad2ec;
+            border: 2px solid #fad2ec;
+        }
